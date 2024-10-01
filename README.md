@@ -9,12 +9,13 @@ The **CharityTracking** smart contract is designed to manage donations and track
 - **Balance Tracking**: Total donations and user-specific balances are tracked.
 - **Safety Checks**: The contract uses assertions and conditions to ensure safe transfers.
 
-## Prerequisites
-- Solidity version: `^0.8.26`
-- Ethereum wallet (e.g., MetaMask)
-- A platform to deploy (e.g., Remix, Hardhat)
-
 ## Contract Details
+
+## Error Handling
+- **`require`** is used to validate inputs and ensure that certain conditions are met before proceeding with the logic (e.g., valid donation amounts, restricting access to the owner).
+- **`revert`** is used to manually trigger an error when a specific condition is not satisfied, especially in more complex checks like withdrawal limits.
+- **`assert`** is used to confirm internal contract invariants, ensuring that critical conditions (like balances) are always in a valid state.
+
 
 ### State Variables
 - `address public owner`: The address of the contract owner.
